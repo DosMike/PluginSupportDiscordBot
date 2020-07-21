@@ -47,7 +47,7 @@ public class Executable {
         System.out.println("Setting up SysTray");
         setupTray();
         System.out.println("Loading properties");
-        if (!loadProperties()) return;
+        if (!loadProperties()) System.exit(0);
         System.out.println("Starting JDA");
         setupJDA(botProperties.getOrDefault("jdatoken",""));
 
